@@ -31,7 +31,7 @@ const products = [
  {name:"Classic Collection",category:"daily",type:"kurti",price:"Ask for price",size:"Add sizes",image:"https://images.unsplash.com/photo-1610189012906-4c4e9c3a2f2a?auto=format&fit=crop&w=700&q=80"},
  {name:"Occasion Wear",category:"occasion",type:"kurti",price:"Ask for price",size:"Add sizes",image:"https://images.unsplash.com/photo-1583391733981-849c7f8f9f5b?auto=format&fit=crop&w=700&q=80"},
  {name:"New Arrival",category:"kurti",type:"kurti",price:"Ask for price",size:"Add sizes",image:"https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&fit=crop&w=700&q=80"}
-];
+];{name:"Short Kurti",category:"kurti",type:"kurti",price:"Ask for price",size:"XL",image:"https://raw.githubusercontent.com/sbdresses/Sb-dresses/main/file_0000000007e48211a05ccd7c7bd85dbf.png"}
 let cart=[];
 const productRoot=document.getElementById('products');
 function render(filter='all'){const list=products.filter(p=>filter==='all'||p.category===filter);productRoot.innerHTML=list.map(p=>{const i=products.indexOf(p);return `<article class="product"><div class="productimg"><img src="${p.image}" alt="${p.name}" loading="lazy"><span class="tag">SB COLLECTION</span></div><div class="productinfo"><h3>${p.name}</h3><p>${p.size}</p><div class="productbottom"><span class="price">${p.price}</span><button class="add" data-add="${i}">Add to order +</button></div></div></article>`}).join('')||'<div class="empty">No products in this category yet.</div>';}
